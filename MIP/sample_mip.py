@@ -30,7 +30,8 @@ def main():
     """
     data = create_data_model()
     # Create the mip solver with the SCIP backend.
-    solver = pywraplp.Solver.CreateSolver("SCIP")
+    # solver = pywraplp.Solver.CreateSolver("SCIP")
+    solver = pywraplp.Solver.CreateSolver("CP_SAT")
     if not solver:
         return
 
